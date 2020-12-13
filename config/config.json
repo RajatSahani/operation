@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "action-field-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/action/ActionFieldCustomizer.js",
+          "manifest": "./src/extensions/action/ActionFieldCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ActionFieldCustomizerStrings": "lib/extensions/action/loc/{locale}.js"
+  }
+}

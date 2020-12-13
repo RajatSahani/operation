@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.19.2003.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-C230262A313D443F99CD124447DA6EB4">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-C230262A313D443F99CD124447DA6EB4" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="FieldsConfig" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/FieldsConfig" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/FieldsConfig/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/FieldsConfig/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/FieldsConfig/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{2ED343E7-A235-46F7-8EA3-FADBE0CED387}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/FieldsConfig/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Key" />
+                <FieldRef Name="Text" />
+                <FieldRef Name="IconName" />
+                <FieldRef Name="Href" />
+                <FieldRef Name="IsRemove" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="Key" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="Key" Title="Key" Type="Text" ID="{29cba414-7435-49d1-ade7-7a4ef1255c5d}" SourceID="{{listid:FieldsConfig}}" StaticName="Key" ColName="nvarchar4" RowOrdinal="0" />
+            <Field DisplayName="Text" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="Text" Title="Text" Type="Text" ID="{324b056c-4b6a-412b-b074-d62d587bcba1}" SourceID="{{listid:FieldsConfig}}" StaticName="Text" ColName="nvarchar5" RowOrdinal="0" />
+            <Field DisplayName="IconName" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="IconName" Title="IconName" Type="Text" ID="{7fb639cc-660b-499f-8aa9-681d135367e4}" SourceID="{{listid:FieldsConfig}}" StaticName="IconName" ColName="nvarchar6" RowOrdinal="0" />
+            <Field DisplayName="Href" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="Href" Title="Href" Type="Text" ID="{f0ea871d-9990-4707-b544-35f94a81cd67}" SourceID="{{listid:FieldsConfig}}" StaticName="Href" ColName="nvarchar7" RowOrdinal="0" />
+            <Field Description="Select yes if it is Remove button yes set it as No." DisplayName="IsRemove" Format="Dropdown" IsModern="TRUE" Name="IsRemove" Required="TRUE" Title="IsRemove" Type="Boolean" ID="{97628ef4-94e8-48e7-b085-6ad7caaedcd7}" SourceID="{{listid:FieldsConfig}}" StaticName="IsRemove" ColName="bit1" RowOrdinal="0">
+              <Default>0</Default>
+            </Field>
+          </pnp:Fields>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://centralindia1.pushnp.svc.ms/notifications?token=225c4724-48e6-4a1c-823d-7912af23647a" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

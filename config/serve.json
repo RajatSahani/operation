@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://agtechnologiespvtltd.sharepoint.com/sites/AAFIntranetDev/Lists/Parent/AllItems.aspx",
+      "fieldCustomizers": {
+        "Action": {
+          "id": "853b7675-9447-49d3-ba4d-9271ffe8bdd2",
+          "properties": {
+            "sampleText": "Value"
+          }
+        }
+      }
+    },
+    "action": {
+      "pageUrl": "https://agtechnologiespvtltd.sharepoint.com/sites/AAFIntranetDev/Lists/Parent/AllItems.aspx",
+      "fieldCustomizers": {
+        "Action": {
+          "id": "853b7675-9447-49d3-ba4d-9271ffe8bdd2",
+          "properties": {
+            "sampleText": "Value"
+          }
+        }
+      }
+    }
+  }
+}
