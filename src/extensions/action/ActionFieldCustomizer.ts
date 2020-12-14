@@ -13,7 +13,7 @@ import Action, { IActionProps } from './components/Action';
 import { sp } from "@pnp/sp";
 import "@pnp/sp/webs";
 
-import {ILookUpField} from '../../Interface/ILookUpField'
+import { ILookUpField } from '../../Interface/ILookUpField'
 /**
  * If your field customizer uses the ClientSideComponentProperties JSON input,
  * it will be deserialized into the BaseExtension.properties object.
@@ -45,7 +45,7 @@ export default class ActionFieldCustomizer
     sp.setup({
       spfxContext: this.context
     });
-    
+
   }
   @override
   public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
@@ -53,35 +53,36 @@ export default class ActionFieldCustomizer
     //const text: string = `${this.properties.sampleText}: ${event.fieldValue}`;
     //console.log(event.listItem.fields)
     //console.log(event.listItem.getValueByName("Action"));
-    let fields=event.listItem.fields;
+    let fields = event.listItem.fields;
     console.log(fields);
-    let id=event.listItem.getValueByName("ID");
+    let id = event.listItem.getValueByName("ID");
     console.log("ID...");
     console.log(id);
     console.log("LookUpExample...")
-    let LookUpField=event.listItem.getValueByName("Action") as ILookUpField[];
+    //let LookUpField=event.listItem.getValueByName("Action") as ILookUpField[];
     console.log(event.listItem.getValueByName("Action"));
-   // let value = event.listItem.getValueByName("Action");
+    let value = event.listItem.getValueByName("Action");
 
     //console.log("value", value);
-    var Keys: string[]=[];
+    var Keys: string[] = [];
 
-
-    //Keys = value[0].split(';').map(item => item.trim());
+    if (value != null) {
+      Keys = value.split('|').map(item => item.trim());
+    }
     //Keys = value;
     //console.log(Keys.length);
     //LookUpField.map((item)=>{Keys.push(item.lookupValue)})
-    LookUpField.map((i)=>{
-    
-      console.log(i.lookupValue);
-      Keys.push(i.lookupValue);
-    })
-      
+    // LookUpField.map((i)=>{
+
+    //   console.log(i.lookupValue);
+    //   Keys.push(i.lookupValue);
+    // })
+
 
     console.log("key", Keys)
     console.log("List Title", this.context.pageContext.list.title)
     const action: React.ReactElement<{}> =
-      React.createElement(Action, { kyes: Keys,id:id,listtitle:this.context.pageContext.list.title } as IActionProps);
+      React.createElement(Action, { kyes: Keys, id: id, listtitle: this.context.pageContext.list.title } as IActionProps);
 
     ReactDOM.render(action, event.domElement);
   }
