@@ -3,7 +3,7 @@
   "solution": {
     "name": "operations-client-side-solution",
     "id": "b11633d5-6db8-4fea-a8e5-9431b78ff39a",
-    "version": "1.0.0.4",
+    "version": "1.0.0.7",
     "includeClientSideAssets": true,
     "isDomainIsolated": false,
     "developer": {

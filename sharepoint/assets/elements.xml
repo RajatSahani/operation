@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
     <Field ID="{8e498abd-ab93-4c6a-8802-aff23d211d35}"
-            Name="SPFxPercentage"
-            DisplayName="Percentage"
+            Name="Action"
+            DisplayName="Action"
             Type="Text"
             Required="FALSE"
             Group="SPFx Columns"
             ClientSideComponentId="853b7675-9447-49d3-ba4d-9271ffe8bdd2">
+            <Default>View|Edit|Delete</Default>
     </Field>
-    <Default>View|Edit|Delete</Default>
+    
 
      <!-- <Field ID="{8e498abd-ab93-4c6a-8802-aff23d211d35}"
             Name="Action"
